@@ -1,11 +1,10 @@
+program = require("./package.json").name
 async   = require("async")
-coffee  = require("coffee-script")
-dd      = require("./lib/dd")
-express = require("express")
-log     = require("./lib/logger").init("template")
-stdweb  = require("./lib/stdweb")
+dd      = require("ddollar")
+log     = require("logfmt").namespace(ns:program)
+stdweb  = require("stdweb")
 
-app = stdweb("template")
+app = stdweb(program)
 
 app.get "/", (req, res) ->
   res.send "ok"

@@ -1,2 +1,2 @@
-/.anvil
-/.env
+.env
+node_modules
